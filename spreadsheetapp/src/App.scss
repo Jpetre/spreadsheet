@@ -1,0 +1,63 @@
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}
+
+.Row {
+  display: flex;
+}
+
+.Cell {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  padding: 5px;
+  height: 40px;
+  color: black;
+  border-top: 1px solid #cacaca;
+  border-left: 1px solid #cacaca;
+  font-size: 15px;
+  overflow: hidden;
+  font-family: Calibri, Arial, Verdana, sans-serif;
+
+  &--info {
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+
+  &--selected {
+    outline-color: lightgrey;
+    outline-style: dotted;
+  }
+
+  .Row:last-child & {
+    border-bottom: 1px solid #cacaca;
+  }
+
+  &:last-child {
+    border-right: 1px solid #cacaca;
+  }
+}
+
+.resetButton {
+  margin-top: 30px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .Cell {
+    width: 60px;
+    padding: 4px;
+    height: 25px;
+    font-size: 13px;
+  }
+}

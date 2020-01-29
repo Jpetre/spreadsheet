@@ -1,0 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+spreadsheetapi/node_modules
+spreadsheetapp/node_modules
+spreadsheetapp/.pnp
+spreadsheetapp.pnp.js
+
+# testing
+spreadsheetapp/coverage
+
+# production
+spreadsheetapp/build
+
+# misc
+spreadsheetapp/.DS_Store
+spreadsheetapp/.env.local
+spreadsheetapp/.env.development.local
+spreadsheetapp/.env.test.local
+spreadsheetapp/.env.production.local
+
+spreadsheetapp/npm-debug.log*
+spreadsheetapp/yarn-debug.log*
+spreadsheetapp/yarn-error.log*
