@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { SpreadSheetContext } from '../Table/Table';
+import { SpreadSheetContext } from '../../store/SpreadSheetContext';
 import { CellType, CellDataType, SpreadSheetContextType } from '../../../../types/types';
 
 interface CellProps extends CellType { }

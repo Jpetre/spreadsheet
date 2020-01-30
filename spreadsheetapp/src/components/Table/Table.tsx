@@ -1,6 +1,7 @@
 import React from 'react';
 import { env } from '../../config/config';
 import Row from '../Row/Row';
+import { SpreadSheetContext } from '../../store/SpreadSheetContext';
 import { CellDataType } from '../../../../types/types';
 
 type TableProps = {
@@ -11,11 +12,6 @@ type TableProps = {
 type TableState = {
   data: { [key: string]: CellDataType };
 };
-
-export const SpreadSheetContext = React.createContext({
-  data: {},
-  updateData: (data: { [key: string]: CellDataType }) => { }
-});
 
 export default class Table extends React.PureComponent<TableProps, TableState> {
   constructor(props: TableProps) {
