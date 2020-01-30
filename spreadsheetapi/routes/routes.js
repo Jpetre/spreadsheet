@@ -10,9 +10,11 @@ const appRouter = function (app) {
     const computation = req.params.computation;
   
     const json = JSON.parse(computation);
-    const length = Object.keys(json).length;
-    for (let x = 1; x < length + 1; x++) {
-      for (let y = 1; y < length + 1; y++) {
+    const columnLength = Object.keys(json).length;
+    const rowLength = Object.keys(json[1]).length;
+
+    for (let x = 1; x < columnLength + 1; x++) {
+      for (let y = 1; y < rowLength + 1; y++) {
         const inputValue = json[x][y].inputValue;
         if(inputValue.includes('=') === true) {
           const isAddition = inputValue.includes('+');
