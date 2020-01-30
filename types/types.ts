@@ -1,5 +1,5 @@
 export interface CellDataType {
-  [key: number]: { value: string, inputValue: string }
+  [key: string]: { value: string | number, inputValue: string }
 }
 
 export interface CellType {
