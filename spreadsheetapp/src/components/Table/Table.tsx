@@ -1,6 +1,7 @@
 import React from 'react';
+import { env } from '../../config/config';
 import Row from '../Row/Row';
-import { RowDataType } from '../../../../types/types';
+import { CellDataType } from '../../../../types/types';
 
 type TableProps = {
   x: number;
@@ -8,18 +9,18 @@ type TableProps = {
 };
 
 type TableState = {
-  data: { [key: string]: RowDataType };
+  data: { [key: string]: CellDataType };
 };
 
 export const SpreadSheetContext = React.createContext({
   data: {},
-  updateData: (data: { [key: string]: RowDataType }) => { }
+  updateData: (data: { [key: string]: CellDataType }) => { }
 });
 
 export default class Table extends React.PureComponent<TableProps, TableState> {
   constructor(props: TableProps) {
     super(props);
-    let data: { [key: string]: RowDataType } = {};
+    let data: { [key: string]: CellDataType } = {};
     for (let x = 1; x < this.props.x + 1; x++) {
       for (let y = 1; y < this.props.y + 1; y++) {
         data[x] = {
@@ -37,11 +38,22 @@ export default class Table extends React.PureComponent<TableProps, TableState> {
     }
   };
 
-  updateData = (data: { [key: string]: RowDataType }) => {
+  fetchComputations = (computations: string) =>
+    fetch(`${env.API}${computations}`)
+      .then(res => res.json());
+
+  updateData = (data: { [key: string]: CellDataType }) => {
     console.log('data update', data);
-    this.setState({
-      data
-    });
+    this.fetchComputations(JSON.stringify(data).replace(/\//g, '!'))
+      .then((res: { result: { [key: string]: CellDataType } }) => {
+        console.log(res.result);
+        this.setState({
+          data: res.result
+        });
+      })
+      .catch(error => {
+        console.log('error', error);
+      });
   }
 
   render() {

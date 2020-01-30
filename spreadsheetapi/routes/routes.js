@@ -18,7 +18,7 @@ const appRouter = function (app) {
           const isAddition = inputValue.includes('+');
           const isSoustraction = inputValue.includes('-');
           const isMultiplication = inputValue.includes('*');
-          const isDivision = inputValue.includes('/');
+          const isDivision = inputValue.includes('!');
           const isAlone = !isAddition && !isSoustraction && !isMultiplication && !isDivision;
 
           const firstCell = inputValue.slice(1,3);

@@ -1,21 +1,16 @@
 import React, { useState, useContext } from 'react';
 import { SpreadSheetContext } from '../Table/Table';
-import { CellType, RowDataType } from '../../../../types/types';
+import { CellType, CellDataType, SpreadSheetContextType } from '../../../../types/types';
 
 interface CellProps extends CellType { }
 
-type Context = {
-  data: { [key: string]: RowDataType };
-  updateData: (data: { [key: string]: RowDataType }) => void;
-}
-
 const Cell: React.FC<CellProps> = (props: CellProps) => {
-  const context: Context = useContext(SpreadSheetContext);
+  const context: SpreadSheetContextType = useContext(SpreadSheetContext);
   const [editing, setEditing] = useState(false);
   const [inputValue, setInputValue] = useState(props.x > 0 && props.y > 0 ? context.data[props.x][props.y].inputValue : '');
 
   const updateContext = (value: string) => {
-    const updatedData: { [key: string]: RowDataType } = context.data;
+    const updatedData: { [key: string]: CellDataType } = context.data;
     updatedData[props.x][props.y].inputValue = value;
     updatedData[props.x][props.y].value = value;
     context.updateData(updatedData);
