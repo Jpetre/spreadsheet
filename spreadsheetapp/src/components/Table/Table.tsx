@@ -53,7 +53,7 @@ export default class Table extends React.PureComponent<TableProps, TableState> {
       .then((res: { result: ColumnDataType }) => {
         console.log(res.result);
         if (window && window.localStorage) {
-          window.localStorage.setItem(this.tableId, JSON.stringify(res.result));
+          window.localStorage.setItem(this.tableId, JSON.stringify(res.result).replace(/!/g, '/'));
         }
         this.setState({
           data: res.result
