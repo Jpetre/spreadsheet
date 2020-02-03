@@ -1,5 +1,5 @@
 import { Request, Response, Application } from 'express';
-import { CellDataType } from '../../types/types';
+import { ColumnDataType } from '../../types/types';
 
 const alphabet = ' abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -13,7 +13,7 @@ const appRouter = (app: Application) => {
   app.get('/:computations', (req: Request, res: Response) => {
     const computations: string = req.params.computations;
 
-    const json: { [key: string]: CellDataType } = JSON.parse(computations);
+    const json: ColumnDataType = JSON.parse(computations);
     const columnLength = Object.keys(json).length;
     const rowLength = Object.keys(json[1]).length;
 

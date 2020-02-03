@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import './Cell.scss';
 import { SpreadSheetContext } from '../../store/SpreadSheetContext';
-import { CellType, CellDataType, SpreadSheetContextType } from '../../../../types/types';
+import { CellType, ColumnDataType, SpreadSheetContextType } from '../../../../types/types';
 
 interface CellProps extends CellType { }
 
@@ -11,7 +11,7 @@ const Cell: React.FC<CellProps> = (props: CellProps) => {
   const [inputValue, setInputValue] = useState(props.x > 0 && props.y > 0 ? context.data[props.x][props.y].inputValue : '');
 
   const updateContext = (value: string) => {
-    const updatedData: { [key: string]: CellDataType } = context.data;
+    const updatedData: ColumnDataType = context.data;
     updatedData[props.x][props.y].inputValue = value;
     updatedData[props.x][props.y].value = value;
     context.updateData(updatedData);

@@ -2,7 +2,7 @@ import React from 'react';
 import { env } from '../../config/config';
 import Row from '../Row/Row';
 import { SpreadSheetContext } from '../../store/SpreadSheetContext';
-import { CellDataType } from '../../../../types/types';
+import { ColumnDataType } from '../../../../types/types';
 
 type TableProps = {
   x: number;
@@ -11,7 +11,7 @@ type TableProps = {
 };
 
 type TableState = {
-  data: { [key: string]: CellDataType };
+  data: ColumnDataType;
 };
 
 export default class Table extends React.PureComponent<TableProps, TableState> {
@@ -19,7 +19,7 @@ export default class Table extends React.PureComponent<TableProps, TableState> {
   constructor(props: TableProps) {
     super(props);
     this.tableId = `tableData-${props.id}`;
-    let data: { [key: string]: CellDataType } = {};
+    let data: ColumnDataType = {};
     if (window && window.localStorage && window.localStorage.getItem(this.tableId)) {
       const storage = window.localStorage.getItem(this.tableId);
       if (storage) data = JSON.parse(storage);
@@ -47,10 +47,10 @@ export default class Table extends React.PureComponent<TableProps, TableState> {
     fetch(`${env.API}${computations}`)
       .then(res => res.json());
 
-  updateData = (data: { [key: string]: CellDataType }) => {
+  updateData = (data: ColumnDataType) => {
     console.log('data update', data);
     this.fetchComputations(JSON.stringify(data).replace(/\//g, '!'))
-      .then((res: { result: { [key: string]: CellDataType } }) => {
+      .then((res: { result: ColumnDataType }) => {
         console.log(res.result);
         if (window && window.localStorage) {
           window.localStorage.setItem(this.tableId, JSON.stringify(res.result));

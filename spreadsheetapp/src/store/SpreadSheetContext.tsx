@@ -1,7 +1,7 @@
 import React from 'react';
-import { CellDataType } from '../../../types/types';
+import { ColumnDataType } from '../../../types/types';
 
 export const SpreadSheetContext = React.createContext({
   data: {},
-  updateData: (data: { [key: string]: CellDataType }) => { }
+  updateData: (data: ColumnDataType) => { }
 });
