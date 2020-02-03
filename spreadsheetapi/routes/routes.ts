@@ -49,7 +49,7 @@ const appRouter = (app: Application) => {
               (isAddition && Number(firstCellCompute) + Number(secondCellCompute)) ||
               (isSoustraction && Number(firstCellCompute) - Number(secondCellCompute)) ||
               (isMultiplication && Number(firstCellCompute) * Number(secondCellCompute)) ||
-              (isDivision && Number(firstCellCompute) / Number(secondCellCompute)) || '';
+              (isDivision && Number(firstCellCompute) / Number(secondCellCompute)) || 0;
           }
         }
       }
