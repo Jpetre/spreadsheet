@@ -1,0 +1,110 @@
+{
+  "1": {
+    "1": {
+      "value": "12",
+      "inputValue": "12"
+    },
+    "2": {
+      "value": "5",
+      "inputValue": "5"
+    },
+    "3": {
+      "value": "",
+      "inputValue": ""
+    },
+    "4": {
+      "value": 7,
+      "inputValue": "=a1-a2"
+    }
+  },
+  "2": {
+    "1": {
+      "value": "15",
+      "inputValue": "15"
+    },
+    "2": {
+      "value": "",
+      "inputValue": ""
+    },
+    "3": {
+      "value": "",
+      "inputValue": ""
+    },
+    "4": {
+      "value": "15",
+      "inputValue": "=b1"
+    }
+  },
+  "3": {
+    "1": {
+      "value": "20",
+      "inputValue": "20"
+    },
+    "2": {
+      "value": "",
+      "inputValue": ""
+    },
+    "3": {
+      "value": "",
+      "inputValue": ""
+    },
+    "4": {
+      "value": "20",
+      "inputValue": "=c1"
+    }
+  },
+  "4": {
+    "1": {
+      "value": "18",
+      "inputValue": "18"
+    },
+    "2": {
+      "value": "2",
+      "inputValue": "2"
+    },
+    "3": {
+      "value": "",
+      "inputValue": ""
+    },
+    "4": {
+      "value": 20,
+      "inputValue": "=d1+d2"
+    }
+  },
+  "5": {
+    "1": {
+      "value": "15",
+      "inputValue": "15"
+    },
+    "2": {
+      "value": "",
+      "inputValue": ""
+    },
+    "3": {
+      "value": "",
+      "inputValue": ""
+    },
+    "4": {
+      "value": 27,
+      "inputValue": "=e1+a1"
+    }
+  },
+  "6": {
+    "1": {
+      "value": "",
+      "inputValue": ""
+    },
+    "2": {
+      "value": "",
+      "inputValue": ""
+    },
+    "3": {
+      "value": "",
+      "inputValue": ""
+    },
+    "4": {
+      "value": "",
+      "inputValue": ""
+    }
+  }
+}
