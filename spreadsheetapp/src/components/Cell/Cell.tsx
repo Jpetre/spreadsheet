@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import './Cell.scss';
 import { SpreadSheetContext } from '../../store/SpreadSheetContext';
 import { CellType, CellDataType, SpreadSheetContextType } from '../../../../types/types';
 

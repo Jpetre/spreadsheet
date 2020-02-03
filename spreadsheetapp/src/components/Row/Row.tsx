@@ -1,4 +1,5 @@
 import React from 'react';
+import './Row.scss';
 import Cell from '../Cell/Cell';
 
 type RowProps = {
