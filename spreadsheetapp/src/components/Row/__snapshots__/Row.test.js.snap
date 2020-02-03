@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row render correctly 1`] = `
+<div
+  className="Row"
+>
+  <div
+    className="Cell Cell--info"
+  >
+    1
+  </div>
+  <div
+    className="Cell"
+    onClick={[Function]}
+  >
+    12
+  </div>
+  <div
+    className="Cell"
+    onClick={[Function]}
+  >
+    15
+  </div>
+  <div
+    className="Cell"
+    onClick={[Function]}
+  >
+    20
+  </div>
+  <div
+    className="Cell"
+    onClick={[Function]}
+  >
+    18
+  </div>
+  <div
+    className="Cell"
+    onClick={[Function]}
+  >
+    15
+  </div>
+</div>
+`;

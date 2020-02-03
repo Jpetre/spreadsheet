@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table render correctly 1`] = `
+<div>
+  <div
+    className="Row"
+  >
+    <div
+      className="Cell Cell--info"
+    >
+      0
+    </div>
+    <div
+      className="Cell Cell--info"
+    >
+      a
+    </div>
+    <div
+      className="Cell Cell--info"
+    >
+      b
+    </div>
+    <div
+      className="Cell Cell--info"
+    >
+      c
+    </div>
+    <div
+      className="Cell Cell--info"
+    >
+      d
+    </div>
+    <div
+      className="Cell Cell--info"
+    >
+      e
+    </div>
+    <div
+      className="Cell Cell--info"
+    >
+      f
+    </div>
+  </div>
+  <div
+    className="Row"
+  >
+    <div
+      className="Cell Cell--info"
+    >
+      1
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+  <div
+    className="Row"
+  >
+    <div
+      className="Cell Cell--info"
+    >
+      2
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+  <div
+    className="Row"
+  >
+    <div
+      className="Cell Cell--info"
+    >
+      3
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+  <div
+    className="Row"
+  >
+    <div
+      className="Cell Cell--info"
+    >
+      4
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+  <div
+    className="Row"
+  >
+    <div
+      className="Cell Cell--info"
+    >
+      5
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+  <div
+    className="Row"
+  >
+    <div
+      className="Cell Cell--info"
+    >
+      6
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="Cell"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+</div>
+`;

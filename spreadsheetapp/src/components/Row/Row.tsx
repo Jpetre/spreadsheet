@@ -1,11 +1,10 @@
 import React from 'react';
+import './Row.scss';
 import Cell from '../Cell/Cell';
-import { RowDataType } from '../../../../types/types';
 
 type RowProps = {
   x: number;
   y: number;
-  rowData: RowDataType;
 };
 
 const Row: React.FC<RowProps> = (props: RowProps) => {
@@ -17,8 +16,6 @@ const Row: React.FC<RowProps> = (props: RowProps) => {
         key={`${x}-${y}`}
         y={y}
         x={x}
-        value={(props.rowData[x] && props.rowData[x].value) || ''}
-        inputValue={(props.rowData[x] && props.rowData[x].inputValue) || ''}
       />,
     );
   };

@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
-import { CellType } from '../../../../types/types';
+import React, { useState, useContext } from 'react';
+import './Cell.scss';
+import { SpreadSheetContext } from '../../store/SpreadSheetContext';
+import { CellType, ColumnDataType, SpreadSheetContextType } from '../../../../types/types';
 
 interface CellProps extends CellType { }
 
 const Cell: React.FC<CellProps> = (props: CellProps) => {
+  const context: SpreadSheetContextType = useContext(SpreadSheetContext);
   const [editing, setEditing] = useState(false);
-  const [inputValue, setInputValue] = useState(props.inputValue);
+  const [inputValue, setInputValue] = useState(props.x > 0 && props.y > 0 ? context.data[props.x][props.y].inputValue : '');
+
+  const updateContext = (value: string) => {
+    const updatedData: ColumnDataType = context.data;
+    updatedData[props.x][props.y].inputValue = value;
+    updatedData[props.x][props.y].value = value;
+    context.updateData(updatedData);
+  };
 
   const handleClick = () => {
     setEditing(true);
@@ -13,12 +23,13 @@ const Cell: React.FC<CellProps> = (props: CellProps) => {
 
   const onBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEditing(false);
+    updateContext(e.target.value);
   };
 
-  // Cant type correctly to have both e.key and e.target.value working (with React.KeyboardEvent<HTMLInputElement>)
-  const onKeyPressOnInput = (e: any) => {
+  const onKeyPressOnInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       setEditing(false);
+      updateContext((e.target as HTMLInputElement).value);
     };
   };
 
@@ -64,7 +75,7 @@ const Cell: React.FC<CellProps> = (props: CellProps) => {
       className='Cell'
       onClick={() => handleClick()}
     >
-      {props.value}
+      {context.data[props.x][props.y].value}
     </div>
   )
 }

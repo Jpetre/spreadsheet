@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell header column render correctly 1`] = `
+<div
+  className="Cell Cell--info"
+>
+  a
+</div>
+`;
+
+exports[`Cell header row render correctly 1`] = `
+<div
+  className="Cell Cell--info"
+>
+  1
+</div>
+`;
+
+exports[`Cell render correctly 1`] = `
+<div
+  className="Cell"
+  onClick={[Function]}
+>
+  12
+</div>
+`;
