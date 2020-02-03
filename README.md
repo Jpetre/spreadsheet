@@ -4,15 +4,15 @@
 
 You can clone or download the project on the Github repository [here](https://github.com/Jpetre/spreadsheet).<br />
 
-### setup API
+### Setup API
 
-Go to spreadsheetapi folder, and use `yarn` command in order to install node modules.<br />
-Then, use `npx ts-node app` command to launch api on port 3001.
+Open your favorite terminal, go to spreadsheetapi folder, and use `yarn` in order to install node modules.<br />
+Then, use `npx ts-node app` to launch api on port 3001.
 
-### setup App
+### Setup App
 
-Go to spreadsheetapp folder, and use `yarn` command in order to install node modules.<br />
-then, use `yarn start` command to compile and see the app in your browser [http://localhost:3000](http://localhost:3000).
+In your terminal, go to spreadsheetapp folder, and use `yarn` in order to install node modules.<br />
+then, use `yarn start` to compile and see the app in your browser [http://localhost:3000](http://localhost:3000).
 
 ### What you can do 
 

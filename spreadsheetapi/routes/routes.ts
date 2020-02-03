@@ -26,7 +26,7 @@ const appRouter = (app: Application) => {
           const isMultiplication = inputValue.includes('*');
           const isDivision = inputValue.includes('!');
           const isAlone = !isAddition && !isSoustraction && !isMultiplication && !isDivision;
-
+          // First cell computing
           const firstCell = inputValue.slice(1, 3);
           const firstColumn = alphabet.findIndex(value => value === firstCell[0]);
           const firstCellCompute = json[firstColumn][firstCell[1]].value;
@@ -34,13 +34,16 @@ const appRouter = (app: Application) => {
             json[x][y].value = '';
             break;
           }
+          // if it's just one cell then we are done
           if (isAlone) {
             json[x][y].value = firstCellCompute;
           }
           else {
+            // Second cell computing
             const secondCell = inputValue.slice(4, 6);
             const secondColumn = alphabet.findIndex(value => value === secondCell[0]);
             const secondCellCompute = json[secondColumn][secondCell[1]].value;
+            // If there is no value on the second cell of the formula, then we are setting this value to empty string
             if (secondCellCompute === '') {
               json[x][y].value = '';
               break;
