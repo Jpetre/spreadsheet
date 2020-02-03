@@ -20,3 +20,5 @@ You can insert numbers, and formulas with a maximum of two cells, like `=a1+a2`,
 A formula like `=b1` is also supported, it will print b1 value when there is a value, it will be empty otherwise.<br />
 Depending on the operator, you can make addition(+), soustaction(-), multiplication(*), or division(/).<br />
 **Note: You can't yet mix number and cell like `=b1-10`, it will be implemented in the futur**
+
+**Note²: If you want to implement this table, you have to know that you can't have more than 99 rows and column, please don't be greedy for now :)**

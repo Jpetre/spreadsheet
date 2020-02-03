@@ -48,10 +48,8 @@ export default class Table extends React.PureComponent<TableProps, TableState> {
       .then(res => res.json());
 
   updateData = (data: ColumnDataType) => {
-    console.log('data update', data);
     this.fetchComputations(JSON.stringify(data).replace(/\//g, '!'))
       .then((res: { result: ColumnDataType }) => {
-        console.log(res.result);
         if (window && window.localStorage) {
           window.localStorage.setItem(this.tableId, JSON.stringify(res.result).replace(/!/g, '/'));
         }

@@ -26,11 +26,10 @@ const Cell: React.FC<CellProps> = (props: CellProps) => {
     updateContext(e.target.value);
   };
 
-  // Cant type correctly to have both e.key and e.target.value working (with React.KeyboardEvent<HTMLInputElement>)
-  const onKeyPressOnInput = (e: any) => {
+  const onKeyPressOnInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       setEditing(false);
-      updateContext(e.target.value);
+      updateContext((e.target as HTMLInputElement).value);
     };
   };
 
