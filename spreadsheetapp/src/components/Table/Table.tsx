@@ -7,6 +7,7 @@ import { CellDataType } from '../../../../types/types';
 type TableProps = {
   x: number;
   y: number;
+  id: string;
 };
 
 type TableState = {
@@ -14,16 +15,24 @@ type TableState = {
 };
 
 export default class Table extends React.PureComponent<TableProps, TableState> {
+  tableId: string;
   constructor(props: TableProps) {
     super(props);
+    this.tableId = `tableData-${props.id}`;
     let data: { [key: string]: CellDataType } = {};
-    for (let x = 1; x < this.props.x + 1; x++) {
-      for (let y = 1; y < this.props.y + 1; y++) {
-        data[x] = {
-          ...data[x],
-          [y]: {
-            value: '',
-            inputValue: '',
+    if (window && window.localStorage && window.localStorage.getItem(this.tableId)) {
+      const storage = window.localStorage.getItem(this.tableId);
+      if (storage) data = JSON.parse(storage);
+    }
+    else {
+      for (let x = 1; x < this.props.x + 1; x++) {
+        for (let y = 1; y < this.props.y + 1; y++) {
+          data[x] = {
+            ...data[x],
+            [y]: {
+              value: '',
+              inputValue: '',
+            }
           }
         }
       }
@@ -43,6 +52,9 @@ export default class Table extends React.PureComponent<TableProps, TableState> {
     this.fetchComputations(JSON.stringify(data).replace(/\//g, '!'))
       .then((res: { result: { [key: string]: CellDataType } }) => {
         console.log(res.result);
+        if (window && window.localStorage) {
+          window.localStorage.setItem(this.tableId, JSON.stringify(res.result));
+        }
         this.setState({
           data: res.result
         });
