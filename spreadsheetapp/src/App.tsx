@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <div className='App'>
       <h1 className='App__title'>SpreadSheet</h1>
-      <Table x={6} y={4} id={'1'} />
+      <Table x={6} y={5} id={'1'} />
       <button className='App__resetButton' onClick={() => handleClearStorage()}>Clear localStorage</button>
     </div>
   );
